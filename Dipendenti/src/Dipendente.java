@@ -1,4 +1,4 @@
-public class Dipendente {
+abstract public class Dipendente {
     private String nominativo;
     private char sesso;
     private String indirizzo;

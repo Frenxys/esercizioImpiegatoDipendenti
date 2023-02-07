@@ -26,7 +26,7 @@ public class Dipendenti {
             if(array[i].getNominativo().equals(nome)){
                 array[i]=null;
                 numerodipendenti--;
-                pushArray(i);
+                pushArray(i); //shift
                 break;
             }
         }
@@ -39,7 +39,6 @@ public class Dipendenti {
                 else if(array[i+1].isImpiegato(array[i+1])){
                     array[i]=new Impiegato((Impiegato) array[i+1]);
                 }
-
             }
     }
 
