@@ -1,23 +1,52 @@
-public class Dipendente {
+import java.time.LocalDate;
+
+abstract public class Dipendente {
     private String nominativo;
     private char sesso;
-    private String indirizzo;
-    public Dipendente(String nominativo,char sesso,String indirizzo){
+    private float stipendio;
+    private LocalDate datanascita;
+    public Dipendente(String nominativo, char sesso, float stipendio,int anno,int mese,int giorno){
+        setStipendio(stipendio);
         setNominativo(nominativo);
         setSesso(sesso);
-        setIndirizzo(indirizzo);
+        setDatanascita(LocalDate.of(anno,mese,giorno));
+    }
+    public Dipendente(String nominativo,char sesso,float stipendio,LocalDate datanascita){
+        setStipendio(stipendio);
+        setNominativo(nominativo);
+        setSesso(sesso);
+        setDatanascita(datanascita);
     }
     public Dipendente(){
 
     }
-    public boolean isDocente(Dipendente d){
-        if(this.getClass()==d.getClass()){
+
+    public void setDatanascita(LocalDate datanascita) {
+        this.datanascita = datanascita;
+    }
+
+    public LocalDate getDatanascita() {
+        return datanascita;
+    }
+
+    public float getStipendio() {
+        return stipendio;
+    }
+
+    public void setStipendio(float stipendio) {
+        this.stipendio = stipendio;
+    }
+
+    public static boolean isDocente(Dipendente d){
+        Docente a=new Docente();
+        if(a.getClass()==d.getClass()){
             return true;
         }
         return false;
     }
-    public boolean isImpiegato(Dipendente a){
-        if(this.getClass()==a.getClass()){
+    public static boolean isImpiegato(Dipendente a){
+        Impiegato b=new Impiegato();
+        if(b.getClass()==a.getClass()){
             return true;
         }
         return false;
@@ -31,19 +60,20 @@ public class Dipendente {
         return sesso;
     }
 
-    public String getIndirizzo() {
-        return indirizzo;
-    }
-
     public void setNominativo(String nominativo) {
         this.nominativo = nominativo;
     }
 
-    public void setIndirizzo(String indirizzo) {
-        this.indirizzo = indirizzo;
-    }
 
     public void setSesso(char sesso) {
         this.sesso = sesso;
+    }
+
+    public static boolean isImpiegatoplus(Dipendente a) {
+        ImpiegatoStraordinario i=new ImpiegatoStraordinario();
+        if(a.getClass()==i.getClass()){
+            return true;
+        }
+        return false;
     }
 }

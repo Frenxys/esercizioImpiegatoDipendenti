@@ -4,28 +4,18 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
         Dipendenti d=new Dipendenti();
-        Impiegato giovanni=new Impiegato("giovanni",'M',"viaverdi","nomeufficio");
-        Impiegato giovannino=new Impiegato("giovannino",'M',"viaverdi","nomeufficio");
-        Docente folli=new Docente("daniele",'M',"viaantonio","profteoria","tepsit");
-        Docente memoli=new Docente("christian",'M',"vianverdi","no","informatica");
-        Docente groppi=new Docente("enrica",'F',"vianazionale","ITP","informatica");
+        Impiegato giovanni=new Impiegato(1989,11,23,"giovanni",'M',1500,3,"ufficiosegreto");
+        ImpiegatoStraordinario luca=new ImpiegatoStraordinario(1980,1,3,"albe",'M',1500,3,"ufficioauguri",34); //34 sono le ore straordinarie
+        Docente sandra=new Docente(1956,3,12,"sandradocente",'F',2900,45,"ITP","tepsit");
         d.addDipendente(giovanni);
-        d.addDipendente(giovannino);
-        d.addDipendente(memoli);
-        d.addDipendente(folli);
-        d.addDipendente(groppi);
-        d.stampaDipendenti();
-        System.out.println("inserisci nome di chi vuoi modificare?");
-        String nome=sc.nextLine();
-        System.out.println("con che indirizzo?");
-        String indirizzo=sc.nextLine();
-        d.cambiaIndirizzoNome(nome,indirizzo);
-        System.out.println("chi vuoi eliminare?");
-        String nomeelimina=sc.nextLine();
-        d.rimuoviDipendente(nomeelimina);
+        d.addDipendente(luca);
+        d.addDipendente(sandra);
+
         d.stampaDocenti();
         d.stampaImpiegati();
-        d.stampaDipendenti();
+        d.stampaImpiegatiplus();
+
+        //d.stampaDipendenti();
 
 
     }
