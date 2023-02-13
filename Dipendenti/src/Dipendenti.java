@@ -1,3 +1,10 @@
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+
+import static java.lang.Float.parseFloat;
+import static java.lang.Integer.parseInt;
+
 public class Dipendenti {
     private Dipendente[] array;
     private int numerodipendenti=0;
@@ -61,6 +68,59 @@ public class Dipendenti {
             if(Dipendente.isDocente(array[i])){
                 System.out.println(array[i].getNominativo());
             }
+        }
+    }
+    public void leggiImpiegati()throws IOException {
+        BufferedReader reader=new BufferedReader(new FileReader("Impiegati.csv"));
+        String linea;
+        while((linea=reader.readLine())!=null){
+            String[] linee=linea.split(";");
+            Impiegato i=new Impiegato(
+                            parseInt(linee[0]),
+                            parseInt(linee[1]),
+                            parseInt(linee[2]),
+                            linee[3],
+                            linee[4].charAt(0),
+                            parseFloat(linee[5]),
+                            parseInt(linee[6]),
+                            linee[7]);
+            addDipendente(i);
+        }
+    }
+    public void leggiImpiegati2()throws IOException{
+        BufferedReader reader=new BufferedReader(new FileReader("Impiegati.csv"));
+        String linea;
+        while((linea=reader.readLine())!=null){
+            String[] linee=linea.split(";");
+            ImpiegatoStraordinario i=new ImpiegatoStraordinario(
+                    parseInt(linee[0]),
+                    parseInt(linee[1]),
+                    parseInt(linee[2]),
+                    linee[3],
+                    linee[4].charAt(0),
+                    parseFloat(linee[5]),
+                    parseInt(linee[6]),
+                    linee[7],
+                    parseInt(linee[8]));
+            addDipendente(i);
+        }
+    }
+    public void leggiDocenti()throws IOException{
+        BufferedReader reader=new BufferedReader(new FileReader("Impiegati.csv"));
+        String linea;
+        while((linea=reader.readLine())!=null){
+            String[] linee=linea.split(";");
+            Docente d=new Docente(
+                    parseInt(linee[0]),
+                    parseInt(linee[1]),
+                    parseInt(linee[2]),
+                    linee[3],
+                    linee[4].charAt(0),
+                    parseFloat(linee[5]),
+                    parseInt(linee[6]),
+                    linee[7],
+                    linee[8]);
+            addDipendente(d);
         }
     }
 }
