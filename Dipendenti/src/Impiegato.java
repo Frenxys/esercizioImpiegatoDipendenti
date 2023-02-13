@@ -3,7 +3,7 @@ import java.time.LocalDate;
 public class Impiegato extends Dipendente{
     private int livello;
     private String ufficio;
-    public Impiegato(int anno,int mese,int ore,String nominativo, char sesso, float stipendio,int livello,String ufficio) {
+    public Impiegato(int id,int anno,int mese,int ore,String nominativo, char sesso, float stipendio,int livello,String ufficio) {
         super(nominativo, sesso, stipendio,anno,mese,ore);
         setLivello(livello);
         setUfficio(ufficio);

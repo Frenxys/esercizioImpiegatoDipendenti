@@ -75,13 +75,15 @@ public class Dipendenti {
         String linea;
         while((linea=reader.readLine())!=null){
             String[] linee=linea.split(";");
+            String[] linee2=linee[1].split("/");
             Impiegato i=new Impiegato(
                             parseInt(linee[0]),
-                            parseInt(linee[1]),
-                            parseInt(linee[2]),
-                            linee[3],
-                            linee[4].charAt(0),
-                            parseFloat(linee[5]),
+                            parseInt(linee2[0]),
+                            parseInt(linee2[1]),
+                            parseInt(linee2[2]),
+                            linee[2],
+                            linee[3].charAt(0),
+                            parseFloat(linee[4]),
                             parseInt(linee[6]),
                             linee[7]);
             addDipendente(i);
@@ -92,13 +94,15 @@ public class Dipendenti {
         String linea;
         while((linea=reader.readLine())!=null){
             String[] linee=linea.split(";");
+            String[] linee2=linee[1].split("/");
             ImpiegatoStraordinario i=new ImpiegatoStraordinario(
                     parseInt(linee[0]),
-                    parseInt(linee[1]),
-                    parseInt(linee[2]),
-                    linee[3],
-                    linee[4].charAt(0),
-                    parseFloat(linee[5]),
+                    parseInt(linee2[0]),
+                    parseInt(linee2[1]),
+                    parseInt(linee2[2]),
+                    linee[2],
+                    linee[3].charAt(0),
+                    parseFloat(linee[4]),
                     parseInt(linee[6]),
                     linee[7],
                     parseInt(linee[8]));
@@ -110,16 +114,18 @@ public class Dipendenti {
         String linea;
         while((linea=reader.readLine())!=null){
             String[] linee=linea.split(";");
+            String[] linee2=linee[1].split("/");
             Docente d=new Docente(
                     parseInt(linee[0]),
-                    parseInt(linee[1]),
-                    parseInt(linee[2]),
-                    linee[3],
-                    linee[4].charAt(0),
-                    parseFloat(linee[5]),
-                    parseInt(linee[6]),
-                    linee[7],
-                    linee[8]);
+                    parseInt(linee2[0]),
+                    parseInt(linee2[1]),
+                    parseInt(linee2[2]),
+                    linee[2],
+                    linee[3].charAt(0),
+                    parseFloat(linee[4]),
+                    parseInt(linee[5]),
+                    linee[6],
+                    linee[7]);
             addDipendente(d);
         }
     }

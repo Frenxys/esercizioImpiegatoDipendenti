@@ -11,7 +11,6 @@ public class Main {
         d.leggiDocenti();
         d.leggiImpiegati();
         d.leggiImpiegati2();
-
         d.stampaDocenti();
         d.stampaImpiegati();
         d.stampaImpiegatiplus();

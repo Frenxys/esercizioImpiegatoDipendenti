@@ -1,8 +1,8 @@
 public class ImpiegatoStraordinario extends Impiegato{
     private int ore;
     private static int pagamentoorario;
-    public ImpiegatoStraordinario(int anno, int mese, int giorno, String nominativo, char sesso, float stipendio, int livello, String ufficio, int orestraordinarie){
-        super(anno,mese,giorno,nominativo, sesso, stipendio,livello,ufficio);
+    public ImpiegatoStraordinario(int id,int anno, int mese, int giorno, String nominativo, char sesso, float stipendio, int livello, String ufficio, int orestraordinarie){
+        super(id,anno,mese,giorno,nominativo, sesso, stipendio,livello,ufficio);
         setOre(orestraordinarie);
     }
     public ImpiegatoStraordinario(){
