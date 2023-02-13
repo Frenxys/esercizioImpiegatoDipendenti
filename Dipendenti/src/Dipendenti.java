@@ -84,13 +84,13 @@ public class Dipendenti {
                             linee[2],
                             linee[3].charAt(0),
                             parseFloat(linee[4]),
-                            parseInt(linee[6]),
-                            linee[7]);
+                            parseInt(linee[5]),
+                            linee[6]);
             addDipendente(i);
         }
     }
     public void leggiImpiegati2()throws IOException{
-        BufferedReader reader=new BufferedReader(new FileReader("Impiegati.csv"));
+        BufferedReader reader=new BufferedReader(new FileReader("ImpiegatiStraordinari.csv"));
         String linea;
         while((linea=reader.readLine())!=null){
             String[] linee=linea.split(";");
@@ -103,14 +103,14 @@ public class Dipendenti {
                     linee[2],
                     linee[3].charAt(0),
                     parseFloat(linee[4]),
-                    parseInt(linee[6]),
-                    linee[7],
-                    parseInt(linee[8]));
+                    parseInt(linee[5]),
+                    linee[6],
+                    parseInt(linee[7]));
             addDipendente(i);
         }
     }
     public void leggiDocenti()throws IOException{
-        BufferedReader reader=new BufferedReader(new FileReader("Impiegati.csv"));
+        BufferedReader reader=new BufferedReader(new FileReader("Docenti.csv"));
         String linea;
         while((linea=reader.readLine())!=null){
             String[] linee=linea.split(";");
