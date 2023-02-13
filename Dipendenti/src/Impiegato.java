@@ -38,4 +38,7 @@ public class Impiegato extends Dipendente{
     public void setLivello(int livello) {
         this.livello = livello;
     }
+    public String toString(){
+        return super.toString()+"livello:"+livello+" ufficio:"+ufficio;
+    }
 }

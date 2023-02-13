@@ -38,4 +38,7 @@ public class Docente extends Dipendente{
     public int getNumeroOre() {
         return numeroOre;
     }
+    public String toString(){
+        return super.toString()+"Ruolo:"+ruolo+" Disciplina:"+disciplina+" numero ore:"+numeroOre;
+    }
 }

@@ -1,5 +1,4 @@
 import java.time.LocalDate;
-
 abstract public class Dipendente {
     private String nominativo;
     private char sesso;
