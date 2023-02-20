@@ -37,15 +37,13 @@ abstract public class Dipendente {
     }
 
     public static boolean isDocente(Dipendente d){
-        Docente a=new Docente();
-        if(a.getClass()==d.getClass()){
+        if(d instanceof Docente){
             return true;
         }
         return false;
     }
     public static boolean isImpiegato(Dipendente a){
-        Impiegato b=new Impiegato();
-        if(b.getClass()==a.getClass()){
+        if(a instanceof Impiegato){
             return true;
         }
         return false;
@@ -69,8 +67,7 @@ abstract public class Dipendente {
     }
 
     public static boolean isImpiegatoplus(Dipendente a) {
-        ImpiegatoStraordinario i=new ImpiegatoStraordinario();
-        if(a.getClass()==i.getClass()){
+        if(a instanceof ImpiegatoStraordinario){
             return true;
         }
         return false;
