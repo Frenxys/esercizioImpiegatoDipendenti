@@ -1,6 +1,6 @@
 public class ImpiegatoStraordinario extends Impiegato{
     private int ore;
-    private static int pagamentoorario;
+    private static int pagamentoorario=10;
     public ImpiegatoStraordinario(int id,int anno, int mese, int giorno, String nominativo, char sesso, float stipendio, int livello, String ufficio, int orestraordinarie){
         super(id,anno,mese,giorno,nominativo, sesso, stipendio,livello,ufficio);
         setOre(orestraordinarie);
@@ -13,7 +13,9 @@ public class ImpiegatoStraordinario extends Impiegato{
         setPagamentoorario(i.getPagamentoorario());
         setOre(i.getOre());
     }
-
+    public float getStipendio(){
+        return super.getStipendio()+(ore*pagamentoorario);
+    }
     public int getPagamentoorario() {
         return pagamentoorario;
     }

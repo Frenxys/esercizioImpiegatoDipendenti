@@ -22,13 +22,13 @@ public class Main {
             System.out.println("5)stampa Dipendenti");
             input=sc.nextInt();
             switch(input){
-                case 1: d.stampaDocenti();
-                case 2:d.stampaImpiegati();
-                case 3:d.stampaImpiegatiplus();
+                case 1: d.stampaDocenti();break;
+                case 2:d.stampaImpiegati();break;
+                case 3:d.stampaImpiegatiplus();break;
                 case 4:
                     System.out.println("inserisci nome Dipendente:");
-                    d.rimuoviDipendente(sc.nextLine());
-                case 5:d.stampaDipendenti();
+                    d.rimuoviDipendente(sc.nextLine());break;
+                case 5:d.stampaDipendenti();break;
             }
         }while(input!=0);
 

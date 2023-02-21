@@ -49,8 +49,7 @@ public class Dipendenti {
         System.out.println("IMPIEGATI:");
         for(int i=0; i<numerodipendenti; i++){
             if(Dipendente.isImpiegato(array[i])){
-                System.out.println(array[i].getNominativo());
-
+                System.out.println(array[i].getNominativo()+" "+array[i].getStipendio());
             }
         }
     }
@@ -58,7 +57,7 @@ public class Dipendenti {
         System.out.println("IMPIEGATISTRAORDINARI:");
         for(int i=0; i<numerodipendenti; i++){
             if(Dipendente.isImpiegatoplus(array[i])){
-                System.out.println(array[i].getNominativo());
+                System.out.println(array[i].getNominativo()+" "+array[i].getStipendio());
             }
         }
     }
@@ -66,7 +65,7 @@ public class Dipendenti {
         System.out.println("DOCENTI:");
         for(int i=0; i<numerodipendenti; i++){
             if(Dipendente.isDocente(array[i])){
-                System.out.println(array[i].getNominativo());
+                System.out.println(array[i].getNominativo()+" "+array[i].getStipendio());
             }
         }
     }
