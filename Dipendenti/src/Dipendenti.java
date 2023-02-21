@@ -8,8 +8,11 @@ import static java.lang.Integer.parseInt;
 public class Dipendenti {
     private Dipendente[] array;
     private int numerodipendenti=0;
-    public Dipendenti(){
+    public Dipendenti() throws IOException {
         array=new Dipendente[100];
+        leggiDocenti();
+        leggiImpiegati();
+        leggiImpiegati2();
     }
     public void addDipendente(Dipendente a){
         array[numerodipendenti]=a;

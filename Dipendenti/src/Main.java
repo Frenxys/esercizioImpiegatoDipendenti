@@ -10,9 +10,6 @@ public class Main {
         //Docente sandra=new Docente(1956,3,12,"sandradocente",'F',2900,45,"ITP","tepsit"); //45 sono le ore e 2900 il mensile
         //d.rimuoviDipendente("giliberta");
         int input=0;
-        d.leggiDocenti();
-        d.leggiImpiegati();
-        d.leggiImpiegati2();
         do{
             System.out.println("cosa vuoi fare?:");
             System.out.println("1)stampa Docenti");
@@ -22,7 +19,7 @@ public class Main {
             System.out.println("5)stampa Dipendenti");
             input=sc.nextInt();
             switch(input){
-                case 1: d.stampaDocenti();break;
+                case 1:d.stampaDocenti();break;
                 case 2:d.stampaImpiegati();break;
                 case 3:d.stampaImpiegatiplus();break;
                 case 4:
