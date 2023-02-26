@@ -105,6 +105,13 @@ public class Dipendenti {
     public void rimuoviDipendente(String nome){
         for(int i=0; i<numerodipendenti; i++){
             if(array[i].getNominativo().equals(nome)){
+                if(array[i] instanceof Impiegato && !(array[i] instanceof ImpiegatoStraordinario)){
+                    numeroImpiegati--;
+                }else if(array[i] instanceof Docente){
+                    numeroDocenti--;
+                }else if(array[i] instanceof ImpiegatoStraordinario){
+                    numeroImpiegatiStraordinari--;
+                }
                 array[i]=null;
                 numerodipendenti--;
                 pushArray(i); //shift
