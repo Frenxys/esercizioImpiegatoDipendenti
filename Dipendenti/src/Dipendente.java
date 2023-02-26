@@ -24,67 +24,34 @@ abstract public class Dipendente {
         setSesso(sesso);
         setDatanascita(datanascita);
     }
-    public Dipendente(){
-
-    }
-
+    public Dipendente(){}
     public void setDatanascita(LocalDate datanascita) {
         this.datanascita = datanascita;
     }
-
     public LocalDate getDatanascita() {
         return datanascita;
     }
-
     public float getStipendio() {
         return stipendio;
     }
-
     public void setStipendio(float stipendio) {
         this.stipendio = stipendio;
     }
-
-    public static boolean isDocente(Dipendente d){
-        if(d instanceof Docente){
-            return true;
-        }
-        return false;
-    }
-    public static boolean isImpiegato(Dipendente a){
-        if(a instanceof Impiegato){
-            return true;
-        }
-        return false;
-    }
-
     public String getNominativo() {
         return nominativo;
     }
-
     public char getSesso() {
         return sesso;
     }
-
     public void setNominativo(String nominativo) {
         this.nominativo = nominativo;
     }
-
-
     public void setSesso(char sesso) {
         this.sesso = sesso;
     }
-
-    public static boolean isImpiegatoplus(Dipendente a) {
-        if(a instanceof ImpiegatoStraordinario){
-            return true;
-        }
-        return false;
-    }
-
     public int getId() {
         return id;
     }
-
     public void setId(int id) {
         this.id = id;
     }

@@ -136,7 +136,7 @@ public class Dipendenti {
     public void stampaImpiegati(){
         System.out.println("IMPIEGATI:");
         for(int i=0; i<numerodipendenti; i++){
-            if(Dipendente.isImpiegato(array[i])){
+            if(array[i] instanceof Impiegato && !(array[i] instanceof ImpiegatoStraordinario)){
                 System.out.println(array[i].getNominativo()+" "+array[i].getStipendio());
             }
         }
@@ -144,7 +144,7 @@ public class Dipendenti {
     public void stampaImpiegatiplus(){
         System.out.println("IMPIEGATISTRAORDINARI:");
         for(int i=0; i<numerodipendenti; i++){
-            if(Dipendente.isImpiegatoplus(array[i])){
+            if(array[i] instanceof Impiegato && array[i] instanceof ImpiegatoStraordinario){
                 System.out.println(array[i].getNominativo()+" "+array[i].getStipendio());
             }
         }
@@ -152,7 +152,7 @@ public class Dipendenti {
     public void stampaDocenti(){
         System.out.println("DOCENTI:");
         for(int i=0; i<numerodipendenti; i++){
-            if(Dipendente.isDocente(array[i])){
+            if(array[i] instanceof Docente){
                 System.out.println(array[i].getNominativo()+" "+array[i].getStipendio());
             }
         }
