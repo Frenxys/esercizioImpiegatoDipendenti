@@ -102,6 +102,7 @@ public class Main {
         String disciplina=sc2.nextLine();
         return new Docente(anno,mese,giorno,nominativo,sesso,stipendio,numeroOre,ruolo,disciplina);
     }
+
     public static ImpiegatoStraordinario creaImpiegatoStraordinario(){//id,anno,mese,giorno,nominativo,sesso,stipendio,livello,ufficio,orestraordinarie
         System.out.println("inserisci anno nascita");
         int anno=sc.nextInt();
