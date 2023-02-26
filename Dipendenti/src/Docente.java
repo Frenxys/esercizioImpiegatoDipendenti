@@ -2,7 +2,7 @@ public class Docente extends Dipendente{
     private int numeroOre;
     private String ruolo;
     private String disciplina;
-    public Docente(int id,int anno,int mese,int giorno,String nominativo, char sesso, float stipendio,int numeroOre,String ruolo,String disciplina) {
+    public Docente(int anno,int mese,int giorno,String nominativo, char sesso, float stipendio,int numeroOre,String ruolo,String disciplina) {
         super(nominativo, sesso, stipendio,anno,mese,giorno);
         setNumeroOre(numeroOre);
         setRuolo(ruolo);

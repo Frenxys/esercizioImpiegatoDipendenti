@@ -1,9 +1,17 @@
 import java.time.LocalDate;
 abstract public class Dipendente {
     private String nominativo;
+    private int id;
     private char sesso;
     private float stipendio;
     private LocalDate datanascita;
+    public Dipendente(int id,String nominativo, char sesso, float stipendio,int anno,int mese,int giorno){
+        setStipendio(stipendio);
+        setNominativo(nominativo);
+        setSesso(sesso);
+        setDatanascita(LocalDate.of(anno,mese,giorno));
+        setId(id);
+    }
     public Dipendente(String nominativo, char sesso, float stipendio,int anno,int mese,int giorno){
         setStipendio(stipendio);
         setNominativo(nominativo);
@@ -71,5 +79,13 @@ abstract public class Dipendente {
             return true;
         }
         return false;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }
