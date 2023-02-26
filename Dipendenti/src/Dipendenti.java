@@ -121,13 +121,13 @@ public class Dipendenti {
     }
     public void pushArray(int pos){ //sposta l'array a sinistra di 1
         for(int i=pos; i<numerodipendenti; i++){
-            if(Dipendente.isDocente(array[i+1])){
+            if(array[i] instanceof Docente){
                 array[i]=new Docente((Docente) array[i+1]);
             }
-            else if(Dipendente.isImpiegato(array[i+1])){
+            else if(array[i] instanceof Impiegato && !(array[i] instanceof ImpiegatoStraordinario)){
                 array[i]=new Impiegato((Impiegato) array[i+1]);
             }
-            else if(Dipendente.isImpiegatoplus(array[i+1])){
+            else if(array[i] instanceof ImpiegatoStraordinario){
                 array[i]=new ImpiegatoStraordinario((ImpiegatoStraordinario) array[i+1]);
             }
         }
