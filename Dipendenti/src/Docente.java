@@ -8,6 +8,7 @@ public class Docente extends Dipendente{
         setRuolo(ruolo);
         setDisciplina(disciplina);
     }
+
     public Docente(Docente d){ //costruttore copia
         super(d.getNominativo(),d.getSesso(),d.getStipendio(),d.getDatanascita());
     }
