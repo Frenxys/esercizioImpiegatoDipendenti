@@ -55,4 +55,5 @@ abstract public class Dipendente {
     public void setId(int id) {
         this.id = id;
     }
+    abstract public double calcolaStipendio();
 }

@@ -9,6 +9,11 @@ public class Docente extends Dipendente{
         setDisciplina(disciplina);
     }
 
+    @Override
+    public double calcolaStipendio() {
+        return super.getStipendio();
+    }
+
     public Docente(Docente d){ //costruttore copia
         super(d.getNominativo(),d.getSesso(),d.getStipendio(),d.getDatanascita());
     }

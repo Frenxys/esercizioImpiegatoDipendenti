@@ -9,6 +9,12 @@ public class Impiegato extends Dipendente{
         setLivello(livello);
         setUfficio(ufficio);
     }
+
+    @Override
+    public double calcolaStipendio() {
+        return super.getStipendio();
+    }
+
     public Impiegato(Impiegato i){
         super(i.getNominativo(),i.getSesso(),i.getStipendio(),i.getDatanascita());
         setLivello(i.getLivello());

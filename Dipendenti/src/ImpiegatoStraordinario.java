@@ -10,9 +10,14 @@ public class ImpiegatoStraordinario extends Impiegato{
     }
     public ImpiegatoStraordinario(ImpiegatoStraordinario i){
         super(i.getNominativo(),i.getSesso(),i.getStipendio(),i.getLivello(),i.getUfficio(),i.getDatanascita());
-        setPagamentoorario(i.getPagamentoorario());
         setOre(i.getOre());
     }
+
+    @Override
+    public double calcolaStipendio() {
+        return super.getStipendio()+(ore*pagamentoorario);
+    }
+
     public float getStipendio(){
         return super.getStipendio()+(ore*pagamentoorario);
     }

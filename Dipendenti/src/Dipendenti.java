@@ -16,7 +16,6 @@ public class Dipendenti {
         leggiImpiegati2();
     }
     public void addDipendente(Dipendente a) throws IOException {
-
         if(a instanceof Impiegato && !(a instanceof ImpiegatoStraordinario)){
             numeroImpiegati++;
             a.setId(numeroImpiegati);
@@ -32,11 +31,12 @@ public class Dipendenti {
         scriviImpiegati();
         scriviDocenti();
         scriviImpiegatiStraordinari();
+
     }
     public void stampaDipendenti(){
         System.out.println("DIPENDENTI:");
         for(int i=0; i<numerodipendenti; i++){
-            System.out.println(array[i].getNominativo());
+            System.out.println(array[i].getNominativo()+" stipendio:"+array[i].calcolaStipendio());
         }
     }
     public void scriviImpiegatiStraordinari()throws IOException{
